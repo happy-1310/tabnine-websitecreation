@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique</title>
+    <style>
+        body {
+            background-color: #F2D3D3;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        form label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="password"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        form input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        // JavaScript code
+        const form = document.querySelector('form');
+        const nameInput = document.querySelector('input[type="text"]');
+        const emailInput = document.querySelector('input[type="email"]');
+        const passwordInput = document.querySelector('input[type="password"]');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = nameInput.value;
+            const email = emailInput.value;
+            const password = passwordInput.value;
+
+            // Perform form submission logic here
+            console.log('Name:', name);
+            console.log('Email:', email);
+            console.log('Password:', password);
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Boutique</h1>
+    </header>
+    <main>
+        <h2>Home</h2>
+        <p>Welcome to our online boutique!</p>
+        <h2>Products</h2>
+        <p>Check out our latest products:</p>
+        <ul>
+            <li>Dress</li>
+            <li>Shoes</li>
+            <li>Accessories</li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2022 Boutique. All rights reserved.</p>
+    </footer>
+</body>
+</html>
